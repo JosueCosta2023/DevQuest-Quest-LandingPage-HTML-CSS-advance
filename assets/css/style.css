@@ -11,7 +11,7 @@ body{
             "main main"
             "footer footer";
     height: 100vh;
-    background-image: url('./assets/images/bg-desktop.svg');
+    background-image: url('/assets/images/bg-desktop.svg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -144,7 +144,7 @@ body{
     }
     
     body{
-        background-image: url('./assets/images/bg-mobile.svg');
+        background-image: url('/assets/images/bg-mobile.svg');
         background-position: bottom;
     }
 }
