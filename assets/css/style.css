@@ -1,0 +1,150 @@
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif; */
+html{
+    background-color: var(--Violet);
+    height: 100vh;
+    width: 100%; 
+}
+body{
+    grid-template-areas: 
+            "header header"
+            "main main"
+            "footer footer";
+    height: 100vh;
+    background-image: url('/assets/images/bg-desktop.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* HEADER */
+.header{
+    grid-area: header;
+    height: 20%;
+}
+
+.header img{
+    margin:20px 30px;
+    width: 120px;
+}
+
+
+/* MAIN */
+.content{
+    grid-area: main;
+    height: 60%;
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.content img{
+    max-width:35%;
+}
+
+.content .info-details{
+    width: 30%;
+    padding: 0 25px;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+.content .info-details .info-title{
+    margin-top: 50px;
+}
+
+.content .info-details .info-text{
+    margin-top: 20px;
+}
+
+.content .info-details .info-btn{
+    margin-top: 30px;
+    width: 150px;
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    color: var(--Violet);
+    cursor: pointer;
+}
+
+.content .info-details .info-btn:hover{
+    background-color: var(--Soft-Magenta);
+    color: white;
+    border: none;
+}
+
+/* FOOTER */
+.social-footer{
+    grid-area: footer;
+    height: 20%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 40px;
+   
+}
+
+.social-footer a{
+    margin: 0 10px;
+}
+
+.social-footer a i{
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+    border: 1px solid white;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    color: white;
+}
+
+.social-footer a i:hover{
+    border: 1px solid var(--Soft-Magenta);
+    color: var(--Soft-Magenta);
+}
+
+@media(max-width: 870px) {
+    .social-footer{
+        justify-content: center;
+    }
+
+    .content .info-details{
+        width: 40%;
+        text-align: center;
+    }
+    .content .info-details .info-title{
+        font-size: 20px;
+        margin-top: 0;
+    }
+
+    .content .info-details .info-text{
+        font-size: 14px;
+    }
+
+    .content img{
+        max-width:50%;
+    }
+}
+
+@media(max-width: 510px){
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+    .content .info-details{
+        width: 100%;
+    }
+
+    .content img{
+        max-width:60%;
+        margin-top: 0;
+    }
+    .header{
+        height: 15%;
+    }
+    
+    body{
+        background-image: url('/assets/images/bg-mobile.svg');
+        background-position: bottom;
+    }
+}
